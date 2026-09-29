@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Pertemuan 12</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            background-color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #444;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #333;
+            min-width: 150px;
+            list-style: none;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            padding: 10px 15px;
+        }
+
+        .gallery-container {
+            padding: 40px;
+        }
+
+        .gallery-container h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        .caption {
+            padding: 10px 5px 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <nav class="navbar">
+        <div class="logo">AZRIL</div>
+
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+
+            <li class="dropdown">
+                <a href="#">Gallery</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="#">Nature</a></li>
+                    <li><a href="#">City</a></li>
+                    <li><a href="#">Technology</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="gallery-container">
+        <h1>My Gallery</h1>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/10/300/200" alt="Nature">
+                <div class="caption">Keindahan Alam</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/20/300/200" alt="Forest">
+                <div class="caption">Senja</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/30/300/200" alt="Mountain">
+                <div class="caption">Suasana Sore</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/40/300/200" alt="City">
+                <div class="caption">Kucing</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/50/300/200" alt="Technology">
+                <div class="caption">Perjalanan</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/60/300/200" alt="Travel">
+                <div class="caption">Teknologi</div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html> 
